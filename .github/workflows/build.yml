@@ -9,10 +9,10 @@ jobs:
 
     steps:
      - name: Checkout
-       uses: actions/checkout@v2
+       uses: actions/checkout@v4.2.2
 
      - name: Cache Toolchain
-       uses: actions/cache@v2
+       uses: actions/cache@v4.2.0
        env:
          cache-name: cache-toolchain
        with:
@@ -36,7 +36,7 @@ jobs:
          make
          
      - name: Upload Build Artifact
-       uses: actions/upload-artifact@v2.2.3
+       uses: actions/upload-artifact@v4.5.0
        with:
          name: PlatypusOS-Build.iso
          path: PlatypusOS.iso
